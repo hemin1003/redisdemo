@@ -1,13 +1,16 @@
 package com.minbo.redisdemo;
 
 import java.util.List;
+
+import com.minbo.redis.common.GlobalParams;
+
 import redis.clients.jedis.Jedis;
 
 public class RedisListJava {
 
 	public static void main(String[] args) {
 		// 连接本地的 Redis 服务
-		Jedis jedis = new Jedis("localhost");
+		Jedis jedis = new Jedis(GlobalParams.HOST_IP_A);
 		System.out.println("Connection to server sucessfully");
 		// 存储数据到列表中
 		jedis.lpush("tutorial-list", "Redis");
