@@ -63,6 +63,10 @@ public class RedisClientSingle {
 		return result;
 	}
 
+	//==============================================
+	//下面的方式同理，只要把ShardedJedis改成JedisPool调用即可
+	//==============================================
+	
 //	public Boolean exists(String key) {
 //		Boolean result = false;
 //		ShardedJedis shardedJedis = redisService.getRedisClient();

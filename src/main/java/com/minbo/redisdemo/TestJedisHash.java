@@ -65,9 +65,10 @@ public class TestJedisHash {
 		// hscan 类似于 scan遍历库中 key下所有的域 返回 file-value 以map 的形式；
 		System.out.println("hscan的用法");
 		ScanParams scanParams = new ScanParams();
-		// 完全匹配key值
+		// 完全匹配key值，不支持模糊匹配
 		scanParams.match("hashMap1");
-		ScanResult<Map.Entry<String, String>> hscanResult = jedis.hscan("hashMapkey", "0", scanParams);
+		//ScanResult<Map.Entry<String, String>> hscanResult = jedis.hscan("hashMapkey", "0", scanParams);
+		ScanResult<Map.Entry<String, String>> hscanResult = jedis.hscan("", 1);
 		int cursor = hscanResult.getCursor(); // 返回0 说明遍历完成
 		System.out.println("游标" + cursor);
 		List<Map.Entry<String, String>> scanResult = hscanResult.getResult();
