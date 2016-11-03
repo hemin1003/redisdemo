@@ -1,5 +1,8 @@
 package com.minbo.redis.single;
 
+/**
+ * 重点看这个类：RedisServiceSingleImpl
+ */
 public class TestSingle {
 
 	public static void main(String[] args) {

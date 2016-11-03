@@ -1,5 +1,8 @@
 package com.minbo.redis.multi;
 
+/**
+ * 重点看这个类：RedisServiceMultiImpl
+ */
 public class TestMulti {
 
 	public static void main(String[] args) {
